@@ -78,6 +78,20 @@ PlayerInput.propTypes = {
     onSubmit: PropTypes.func.isRequired,
 }
 
+function PlayerPreview({ username, onreset, label }) {
+    return (
+        <div className='column player'>
+            {username}
+        </div>
+    )
+}
+
+PlayerPreview.propTypes = {
+    username: PropTypes.string.isRequired,
+    onReset: PropTypes.func.isRequired,
+    label: PropTypes.string.isRequired,
+}
+
 export default class Battle extends React.Component {
     constructor(props) {
         super(props)
@@ -105,16 +119,26 @@ export default class Battle extends React.Component {
                 <div className='players-container'>
                     <h1 className='center-text header-lg'>Players</h1>
                     <div className='row space-around'>
-                        {playerOne === null && (
-                            <PlayerInput 
-                            label='Player One'
-                            onSubmit={(player) => this.handleSubmit('playerOne', player)} 
+                        {playerOne === null
+                            ? <PlayerInput
+                                label='Player One'
+                                onSubmit={(player) => this.handleSubmit('playerOne', player)}
+                            />
+                            : <PlayerPreview
+                                username={playerOne}
+                                label='Player One'
+                                onReset={() => ({})}
                             />
                         )}
-                        {playerTwo === null && (
-                            <PlayerInput 
-                            label='Player Two'
-                            onSubmit={(player) => this.handleSubmit('playerTwo', player)} 
+                        {playerTwo === null
+                            ? <PlayerInput
+                                label='Player Two'
+                                onSubmit={(player) => this.handleSubmit('playerTwo', player)}
+                            />
+                            : <PlayerPreview
+                                username={playerTwo}
+                                label='Player Two'
+                                onReset={() => ({})}
                             />
                         )}
                     </div>
