@@ -206,8 +206,31 @@ box-shadow: inset 0 1px 2px rgba(0,0,0,0.15);
 .dark-btn:disabled {
     background: #f2f2f2;
     color: #c7c7c7;
+    cursor:initial;
 }
 
 .players-container {
     margin: 6.25em 0;
+}
+
+.avatar-small {
+    width: 3.4375em;
+    height: 3.4375em;
+    border-radius: 50%;
+}
+
+.player-info {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    font-size: 1.25rem;
+    padding: 0.625em;
+}
+
+.player-info .link {
+    margin-left: 0.625em;
+}
+
+.btn-space {
+    margin: 2.5em auto;
 }
