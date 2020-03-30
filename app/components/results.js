@@ -112,7 +112,7 @@ export default class Results extends React.Component {
         )
     }
 }
-
+/stage 
 Results.propTypes = {
     playerOne: PropTypes.string.isRequired,
     playerTwo: PropTypes.string.isRequired,
