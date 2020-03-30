@@ -1,6 +1,6 @@
 import React from 'react'
 import { battle } from '../utils/api'
-import { FaCompass, FaBriefcase, FaUsers, FaUserFriends, FaCode, FaUser } from 'react-icons/fa'
+import { FaCompass, FaBriefcase, FaUsers, FaUserFriends, FaCode, FaUser, FaYahoo } from 'react-icons/fa'
 import Card from './Card'
 import PropTypes from 'prop-types'
 
@@ -112,7 +112,7 @@ export default class Results extends React.Component {
         )
     }
 }
-/stage 
+
 Results.propTypes = {
     playerOne: PropTypes.string.isRequired,
     playerTwo: PropTypes.string.isRequired,
