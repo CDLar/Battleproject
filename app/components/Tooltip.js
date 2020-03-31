@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import withHover from 
+import withHover from './withHover'
 
 const styles = {
     container: {
