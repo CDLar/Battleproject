@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { fetchPopularRepos } from '../utils/api'
 import { FaUser, FaStar, FaCodeBranch, FaExclamationTriangle } from 'react-icons/fa'
 import Card from './Card'
+import Loading from './Loading'
+import Tooltip from './Tooltip'
 
 function LangaugesNav({ selected, onUpdateLanguage }) {
   const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python']
@@ -45,22 +47,30 @@ function ReposGrid({ repos }) {
             >
               <ul className='card-list'>
                 <li>
-                  <FaUser color='rgb(255,191,116)' size={22} />
-                  <a href={`https://gtihub.com/${login}`}>
-                    {login}
-                  </a>
+                  <Tooltip text="Github username">
+                    <FaUser color='rgb(255,191,116)' size={22} />
+                    <a href={`https://gtihub.com/${login}`}>
+                      {login}
+                    </a>
+                  </Tooltip>
                 </li>
                 <li>
+                <Tooltip text="Stargazer count">
                   <FaStar color="rgb(255,215,0)" size={22} />
                   {stargazers_count.toLocaleString()} stars
+                  </Tooltip>
               </li>
                 <li>
+                <Tooltip text="Code forks">
                   <FaCodeBranch color="rgb(129,195,245)" size={22} />
                   {forks.toLocaleString()} forks
+                  </Tooltip>
               </li>
                 <li>
+                <Tooltip text="Open issues">
                   <FaExclamationTriangle color="rgb(241,138,147)" size={22} />
-                  {open_issues.toLocaleString()} open open_issues
+                  {open_issues.toLocaleString()} open
+                  </Tooltip>
               </li>
               </ul>
             </Card>
@@ -131,7 +141,7 @@ export default class Popular extends React.Component {
           onUpdateLanguage={this.updateLanguage}
         />
 
-        {this.isLoading() && <p>LOADING</p>}
+        {this.isLoading() && <Loading text='Fetching Repos' />}
 
         {error && <p className='center-text error'>{error}</p>}
 
