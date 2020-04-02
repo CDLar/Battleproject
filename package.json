@@ -29,9 +29,9 @@
     "webpack-dev-server": "^3.10.3"
   },
   "scripts": {
-    "start": "webpack-dev-server",
-    "build": "NODE_ENV='production' webpack"
-  },
+    "build": "cross-env NODE_ENV=production webpack",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --content-base dist --hot"
+},
   "babel": {
     "presets": [
       "@babel/preset-env",
