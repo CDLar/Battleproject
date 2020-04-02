@@ -55,23 +55,23 @@ function ReposGrid({ repos }) {
                   </Tooltip>
                 </li>
                 <li>
-                <Tooltip text="Stargazer count">
-                  <FaStar color="rgb(255,215,0)" size={22} />
-                  {stargazers_count.toLocaleString()} stars
+                  <Tooltip text="Stargazer count">
+                    <FaStar color="rgb(255,215,0)" size={22} />
+                    {stargazers_count.toLocaleString()} stars
                   </Tooltip>
-              </li>
+                </li>
                 <li>
-                <Tooltip text="Code forks">
-                  <FaCodeBranch color="rgb(129,195,245)" size={22} />
-                  {forks.toLocaleString()} forks
+                  <Tooltip text="Code forks">
+                    <FaCodeBranch color="rgb(129,195,245)" size={22} />
+                    {forks.toLocaleString()} forks
                   </Tooltip>
-              </li>
+                </li>
                 <li>
-                <Tooltip text="Open issues">
-                  <FaExclamationTriangle color="rgb(241,138,147)" size={22} />
-                  {open_issues.toLocaleString()} open
+                  <Tooltip text="Open issues">
+                    <FaExclamationTriangle color="rgb(241,138,147)" size={22} />
+                    {open_issues.toLocaleString()} open
                   </Tooltip>
-              </li>
+                </li>
               </ul>
             </Card>
           </li>
