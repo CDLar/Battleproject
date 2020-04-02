@@ -17,9 +17,9 @@ li {
 }
 
 .container{
-    max-width: 1200px;
+    max-width: 75em;
     margin: 0 auto;
-    padding: 50px;
+    padding: 3.125em;
 }
 
 .dark {
