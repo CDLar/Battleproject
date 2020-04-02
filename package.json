@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
-    "crossenv": "0.0.2-security",
     "prop-types": "^15.7.2",
     "query-string": "^6.11.1",
     "react": "^16.13.1",
@@ -18,7 +17,6 @@
     "@babel/preset-react": "^7.9.1",
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^5.1.1",
-    "cross-env": "^7.0.2",
     "css-loader": "^3.4.2",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
